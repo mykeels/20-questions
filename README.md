@@ -135,11 +135,43 @@ E.g. `30,456 becomes "Thirty thousand, four hundred and fifty six"`.
 
 [See More](./programming/14-number-in-words.md)
 
-## 15.
+## 15. Compound Interest Calculator
 
-## 16.
+Request the Principal.
 
-## 17.
+Request the Rate.
+
+Request the Time in Years.
+
+Calculate and output the simple interest. (`P * R * T / 100`).
+
+For each year, calculate and output the compound interest.
+
+[See More](./programming/15-compound-interest-calculator.md).
+
+## 16. Convert to Decimal
+
+Write a program to convert from base n to decimal (base 10).
+
+Request the value of n.
+
+Request the number value (integer).
+
+Convert to base 10, and output the result.
+
+[See More](./programming/16-convert-to-decimal.md)
+
+## 17. Convert Decimal to Base n
+
+Write a program to convert from decimal (base 10) to base n.
+
+Request the value of n.
+
+Request the decimal value.
+
+Convert to base n, and output the result.
+
+[See More](./programming/17-convert-decimal-to-base-n.md)
 
 ## 18. Simple CGPA calculator
 
