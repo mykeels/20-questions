@@ -2,6 +2,8 @@
 
 As per [this blog post](https://medium.com/@mykeels/20-questions-a047fa9d3856), I hope to provide 20 questions for beginners, and intermediate programmers, that will help in achieving some level of confidence in skills with programming languages and frameworks.
 
+![20 questions](https://user-images.githubusercontent.com/11996508/58572309-55722e00-8233-11e9-898d-7c71b56770c4.png)
+
 Each question will require a practical solution, and the concepts you're expected to have mastered by the time you accept it, will be given in detail.
 
 > This is not an list of algorithm exercises.
