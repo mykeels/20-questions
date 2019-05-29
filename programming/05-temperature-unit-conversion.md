@@ -11,7 +11,7 @@ Enter an option:
 
 - If the user enters `1`, ask the user to `"Enter a celsius value:"`.
 
-- Else, ask the user to `"Enter a Farhenheit value:"`.
+- Else, ask the user to `"Enter a Fahrenheit value:"`.
 
 Convert the entered value to celsius or fahrenheit accordingly. [See More](./programming/05-temperature-unit-conversion.md).
 

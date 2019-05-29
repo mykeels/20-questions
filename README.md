@@ -57,13 +57,13 @@ Enter an option:
 
 - If the user enters `1`, ask the user to `"Enter a celsius value:"`.
 
-- Else, ask the user to `"Enter a Farhenheit value:"`.
+- Else, ask the user to `"Enter a Fahrenheit value:"`.
 
 Convert the entered value to celsius or fahrenheit accordingly. [See More](./programming/05-temperature-unit-conversion.md).
 
 ## 6. Multiplication Table
 
-Using a for/while loop, write a program that prints out a simple multplication from 2 - 12. E.g.
+Using a for/while loop, write a program that prints out a simple multiplication from 2 - 12. E.g.
 
 ```txt
 2   3   4   5   6   7   8   9   10  11  12

@@ -1,6 +1,6 @@
 # Multiplication Table
 
-Using a for/while loop, write a program that prints out a simple multplication from 2 - 12. E.g.
+Using a for/while loop, write a program that prints out a simple multiplication from 2 - 12. E.g.
 
 ```txt
 2   3   4   5   6   7   8   9   10  11  12
