@@ -10,7 +10,7 @@ Display `The love percentage is <Result>%`.
 
 - Concatenate both names, separated by `"loves"`, in lowercase e.g. `bolalovesbisi`
 
-- Count the occurence of each letter/character in the concatenation result. E.g.
+- Count the occurrence of each letter/character in the concatenation result. E.g.
 
 ```txt
 b => 2
