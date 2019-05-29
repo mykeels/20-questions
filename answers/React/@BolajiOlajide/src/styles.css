@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  font-family: sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+  background-color: #ddd;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+}
+
+.App > div {
+  border: 3px solid #0b0b0b;
+  cursor: pointer;
+  background-color: #f7f7f7;
+  word-wrap: break-word;
+  word-break: break-word;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s;
+  text-transform: capitalize;
+  padding: 1rem;
+}
+
+.App > div:hover {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.3rem;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 1rem;
+  background-color: rgb(55, 142, 212);
+}
+
+.layout {
+  background: #fff;
+  padding: 1rem;
+  width: 100%;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation {
+  background-color: #FFF;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navigation > span {
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.layout-container {
+  width: 100%;
+}
+
+input, textarea {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0.5rem;
+}
+
+button {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: beige;
+  border: 2px solid black;
+  outline: 0;
+  cursor: pointer;
+}
+
+.file-content {
+  border: 2px solid darkturquoise;
+  min-width: 40%;
+  padding: 2rem;
+  text-align: center;
+}
