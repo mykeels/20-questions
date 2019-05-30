@@ -198,3 +198,5 @@ Let the user input either `yes` or `no`.
 ## 20. Love Calculator
 
 Write a love calculator program that calculates a love percentage, using two names. [See More](./programming/20-love-calculator.md).
+
+looking to contribute? checkout the [contributing guide](contributing.md)
