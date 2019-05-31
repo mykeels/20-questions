@@ -1,0 +1,39 @@
+<html>
+<!--
+Request the user's first name, last name and age.
+Print out Welcome, <First-Name> [Son/Daughter] of <Last-Name> (<Year-Of-Birth>),
+where Son is printed out if male, and Daughter if female
+
+Variant 2
+-->
+
+<body>
+  <button onclick="getUserInfo()"> Run </button>
+  <h3 id="answer"><h3>
+
+  <script>
+  let getUserInfo = () => {
+    //Get user input
+    let firstName = prompt("Please enter your first name", "");
+    let lastName = prompt("Please enter your last name", "");
+    let age = prompt("Please enter your age", "");
+    let gender = prompt("Please enter your gender", "");
+
+    //Ensure all req. fields are submitted
+
+    if (firstName !== "" && lastName !== "" && age !== "" && gender !== "") {
+      gender = gender.toLowerCase();
+      //Set prefix for son/daughter (Doesn't handle wrong input ie neither male nor female)
+      let prefix = gender === "male" ? "Son" : "Daughter";
+
+      //Get year of birth
+      let currentYear = new Date().getFullYear();
+      let yearOfBirth = currentYear - Number(age);
+      //Show result on page
+      document.getElementById("answer").innerHTML =
+      `Welcome, ${firstName} ${prefix} of ${lastName} ( ${yearOfBirth} )`
+    }
+  }
+  </script>
+</body>
+</html>

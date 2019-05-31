@@ -1,0 +1,56 @@
+<html>
+<!--
+Output a random word. Ask the user to type in the reverse.
+
+If the user is correct, output ✅
+
+Else, output ❌
+
+Repeat.
+-->
+
+<body>
+  <br />
+  <button onclick="generateWord()"> Generate A Word </button>
+  <h1 id="word"><h1>
+  <h3 id="answer"><h3>
+
+  <script>
+  let generateWord = () => {
+    //Pick a random word from array
+    let words = [
+      "metamorphosis",
+      "schizophrenia",
+      "nymphomaniac",
+      "papadopoulos",
+      "photosynthesis",
+      "mkhitarian",
+      "perpendicular",
+      "intraterrestial"
+    ];
+
+    let randomNumber = Math.floor(Math.random() * 8);
+    let word = words[randomNumber];
+    //Show random word
+    document.getElementById("word").innerHTML =
+    `${word}`;
+
+    //Wait for DOM update
+    setTimeout(function () {
+      //Ask for user input
+      let userInput = prompt("Enter word in reverse", "")
+      //Determine if input is correct
+      if (userInput !== ""){
+        userInput = userInput.split('').reverse().join('')
+
+        let message = userInput === word ? "Correct" : "Wrong"
+        //Show result on page
+        document.getElementById("answer").innerHTML =
+        `${message}`
+      }
+    }, 10);
+
+  }
+  </script>
+</body>
+</html>
