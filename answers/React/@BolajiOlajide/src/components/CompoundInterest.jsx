@@ -15,16 +15,23 @@ function CompoundInterest({ setPage }) {
 
   const computeInterestDetails = () => {
     const simpleInterest = ((principal * time * rate) / 100);
-    let compoundInterest = [
+    let compoundInterestDetails = [
       <p key={generateUniqueKey()}>Compound Interest</p>
     ];
+    let newPrincipal = principal;
 
     for (let i = 0; i < time; i++) {
-
+      const compoundInterest = ((newPrincipal * rate) / 100);
+      newPrincipal = Number(newPrincipal) + Number(compoundInterest)
+      compoundInterestDetails.push(
+        <p key={generateUniqueKey()}>
+          Year {i + 1}: {newPrincipal}
+        </p>
+      )
     }
     setInterestDetails([
       <span key={generateUniqueKey()}>Simple Interest: {simpleInterest}</span>,
-      ...compoundInterest
+      ...compoundInterestDetails
     ])
   }
 

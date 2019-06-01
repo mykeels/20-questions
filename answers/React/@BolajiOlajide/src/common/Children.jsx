@@ -17,6 +17,8 @@ import SalaryClassifier from '../components/SalaryClassifier';
 import TaxClassifier from '../components/TaxClassifer';
 import NumbersInWords from '../components/NumbersInWords';
 import CompoundInterest from '../components/CompoundInterest';
+import DecimalConverter from '../components/DecimalConverter';
+import BaseNConverter from '../components/BaseNConverter';
 
 
 function Children({ page, setPage }) {
@@ -52,7 +54,14 @@ function Children({ page, setPage }) {
     case 'numbers-in-words':
       return <NumbersInWords setPage={setPage} />;
     case 'compound-interest':
-        return <CompoundInterest setPage={setPage} />;
+      return <CompoundInterest setPage={setPage} />;
+    case 'decimal-converter':
+      return <DecimalConverter setPage={setPage} />;
+    case 'base-n-converter':
+      return <BaseNConverter setPage={setPage} />;
+    case 'cgpa':
+    case 'attendance':
+    case 'love':
     default:
       return <Home setPage={setPage} />;
   }

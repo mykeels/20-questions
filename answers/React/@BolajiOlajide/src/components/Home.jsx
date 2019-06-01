@@ -18,11 +18,11 @@ function Home({ setPage }) {
     <div onClick={() => setPage('tax')}>Tax Classifier</div>
     <div onClick={() => setPage('numbers-in-words')}>Number in Words</div>
     <div onClick={() => setPage('compound-interest')}>Compound Interest Calculator</div>
-    <div onClick={() => setPage('')}>Convert to Decimal</div>
-    <div onClick={() => setPage('')}>Convert Decimal to Base n</div>
-    <div onClick={() => setPage('')}>Simple CGPA calculator</div>
-    <div onClick={() => setPage('')}>Attendance Register</div>
-    <div onClick={() => setPage('')}>Love Calculator</div>
+    <div onClick={() => setPage('decimal-converter')}>Convert to Decimal</div>
+    <div onClick={() => setPage('base-n-converter')}>Convert Decimal to Base n</div>
+    <div onClick={() => setPage('cgpa')}>Simple CGPA calculator</div>
+    <div onClick={() => setPage('attendance')}>Attendance Register</div>
+    <div onClick={() => setPage('love')}>Love Calculator</div>
   </div>
 }
 
