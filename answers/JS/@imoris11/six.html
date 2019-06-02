@@ -1,0 +1,39 @@
+<html>
+<!--
+Using a for/while loop, write a program that prints out a simple multiplication from 2 - 12.
+-->
+
+<body>
+  <button onclick="getUserInfo()"> Run </button>
+  <div id="answer"><div>
+  <script>
+  let showTimeTable = () => {
+      //Print 2-12
+      let breakNode = document.createElement("BR");
+      for (let i = 2; i<=12; i++) {
+        let node = document.createElement("SPAN");
+        let textNode = document.createTextNode(`${i}`);
+        node.appendChild(textNode);
+        node.style.padding = "18px";
+        document.getElementById("answer").appendChild(node);
+        document.getElementById("answer").appendChild(breakNode);
+      }
+      //Print Multiplication Table
+      for (let i = 2; i<=12; i++) {
+        let breakNode = document.createElement("BR");
+        for (let j = 2; j<=12; j++) {
+          let node = document.createElement("SPAN");
+          let textNode = document.createTextNode(`${j*i}`);
+          node.appendChild(textNode);
+          node.style.padding = "16px";
+          document.getElementById("answer").appendChild(node);
+        }
+        document.getElementById("answer").appendChild(breakNode);
+      }
+
+  }
+  showTimeTable();
+  // TODO: FIX SPACING
+  </script>
+</body>
+</html>
