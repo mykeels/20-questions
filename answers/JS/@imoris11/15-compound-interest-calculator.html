@@ -1,0 +1,36 @@
+<html>
+<!--
+Request the Principal.
+
+Request the Rate.
+
+Request the Time in Years.
+
+Calculate and output the simple interest. (P * R * T / 100).
+
+For each year, calculate and output the compound interest.
+-->
+
+<body>
+  <h3 id="answer"><h3>
+
+  <script>
+  let compoundInterest = () => {
+    //Get user input
+    let principal = prompt("Please enter principal", "");
+    let rate = prompt("Please enter rate", "");
+    let time = prompt("Please enter time in years", "");
+
+    //Ensure all req. fields are submitted
+
+    if ( Number(principal) > 0 && Number(rate) > 0 && Number(time) > 0 ) {
+      let interest = ((principal * rate * time ) / 100);
+      //Show result on page
+      document.getElementById("answer").innerHTML =
+      `${interest}`;
+    }
+  }
+  compoundInterest();
+  </script>
+</body>
+</html>
