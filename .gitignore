@@ -86,3 +86,10 @@ typings/
 
 # DynamoDB Local files
 .dynamodb/
+/answers/Java/@thecarisma/20-questions/nbproject/private/
+/answers/Java/@thecarisma/20-questions/build/
+
+# Java Build Files
+*.class
+/answers/Java/@thecarisma/build/
+/answers/Java/@thecarisma/dist/
