@@ -4,7 +4,7 @@ The answers given here are organized by languages and authors
 
 ## C
 
-- @mykeels: [See Answers](./C/@mykeels)
+- [@mykeels](https://github.com/mykeels): [See Answers](./C/@mykeels)
 
 ## Java
 
