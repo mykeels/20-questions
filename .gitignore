@@ -86,3 +86,12 @@ typings/
 
 # DynamoDB Local files
 .dynamodb/
+
+# Win Executables
+*.exe
+*.exe.stackdump
+*.bin
+*.ipch
+
+# VS Code
+.vscode

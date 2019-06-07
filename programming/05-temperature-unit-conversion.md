@@ -13,7 +13,7 @@ Enter an option:
 
 - Else, ask the user to `"Enter a Fahrenheit value:"`.
 
-Convert the entered value to celsius or fahrenheit accordingly. [See More](./programming/05-temperature-unit-conversion.md).
+Convert the entered value to celsius or fahrenheit accordingly.
 
 ## Variants
 
