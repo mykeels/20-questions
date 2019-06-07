@@ -93,3 +93,12 @@ typings/
 *.class
 /answers/Java/@thecarisma/build/
 /answers/Java/@thecarisma/dist/
+
+# Win Executables
+*.exe
+*.exe.stackdump
+*.bin
+*.ipch
+
+# VS Code
+.vscode
