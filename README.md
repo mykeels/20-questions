@@ -8,6 +8,8 @@ Each question will require a practical solution, and the concepts you're expecte
 
 > This is not an list of algorithm exercises.
 
+See [answers](./answers).
+
 Find the questions below:
 
 ## 1. Name Concatenation
