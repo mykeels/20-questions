@@ -18,10 +18,6 @@ while(not utils.checkEmptyString(age) or not utils.isValidNumber(age)):
     age = input("We didn't get that before. Input your age please we beg ")
 
 
-user_gender = input(f"Last question, we promise. What's your gender? ")
-while(not utils.checkEmptyString(user_gender)):
-    user_gender = input("We didn't get that before. Tell us your gender ")
-
 yearOfBirth = 0
 try:
     yearOfBirth = utils.yearOfBirthCalculator(int(age))

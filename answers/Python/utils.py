@@ -1,7 +1,6 @@
 import datetime
 #Calculate year of birth
 def yearOfBirthCalculator(age):
-
     if age < 1:
         raise ArithmeticError(f"Age cannot be zero, {age}")
         
