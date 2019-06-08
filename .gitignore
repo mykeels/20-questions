@@ -89,3 +89,12 @@ typings/
 
 #Python cache
 answers/Python/__pycache__
+
+# Win Executables
+*.exe
+*.exe.stackdump
+*.bin
+*.ipch
+
+# VS Code
+.vscode
