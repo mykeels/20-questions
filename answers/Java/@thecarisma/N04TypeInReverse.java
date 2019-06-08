@@ -24,9 +24,9 @@ public class N04TypeInReverse {
             System.out.printf("Type the word '%s' in reverse: ", word);
             userInput = scanner.nextLine();
             if (userInput.equals(reverseWord(word))) 
-                System.out.println("✅");
+                System.out.println("\u2705");
             else
-                System.out.println("❌");
+                System.out.println("\u274C");
         }
     }
     
