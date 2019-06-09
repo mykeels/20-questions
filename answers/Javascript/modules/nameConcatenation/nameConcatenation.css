@@ -23,7 +23,7 @@ a, h1, p {
 	flex-direction: column;
 }
 
-#concatenationForm {
+.form {
 	display: block;
 	width: 500px;
 	margin: 0 auto;
@@ -34,6 +34,7 @@ a, h1, p {
 }
 
 .result {
-	padding: 10px 20px;
+	padding: 5px 10px;
 	border: 2px dashed green;
+	border-radius: 3px;
 }
