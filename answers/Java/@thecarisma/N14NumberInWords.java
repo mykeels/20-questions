@@ -39,6 +39,7 @@ public class N14NumberInWords {
             number /= 10;
         }
         if (number == 0) return soFar;
+        soFar = " and" + soFar ;
         return numberNames[number] + " hundred" + soFar;
     }
 
