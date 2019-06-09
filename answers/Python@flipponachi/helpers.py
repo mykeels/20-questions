@@ -22,3 +22,10 @@ def isValidNumber(stringInt):
         return True
     except ValueError:
         return False
+
+#Check for string length
+def isStringLengthValid(stringValue):
+    if len(stringValue) < 2:
+        return False
+    
+    return True
