@@ -87,6 +87,9 @@ typings/
 # DynamoDB Local files
 .dynamodb/
 
+#Python cache
+answers/Python/__pycache__
+
 # Win Executables
 *.exe
 *.exe.stackdump
