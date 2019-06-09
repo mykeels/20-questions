@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a2810f5c-cdfa-44ac-8b1d-9dd0b72d5c36" name="Default Changelist" comment="" />
+    <list default="true" id="a2810f5c-cdfa-44ac-8b1d-9dd0b72d5c36" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/N02Lottery.java" beforeDir="false" afterPath="$PROJECT_DIR$/N02Lottery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/N16ConvetToDecimal.java" beforeDir="false" afterPath="$PROJECT_DIR$/N16ConvertToDecimal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/N18SimpleCGPACalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/N18SimpleCGPACalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/N20LoveCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/N20LoveCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/private/private.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -9,8 +15,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -23,11 +28,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/N20LoveCalculator.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="162">
-              <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
+              <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/N16ConvertToDecimal.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -60,7 +74,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -72,6 +85,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -93,7 +107,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.N20LoveCalculator">
+  <component name="RunManager" selected="Application.N16ConvertToDecimal">
     <configuration name="N01NameConcatenation" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="N01NameConcatenation" />
       <module name="@thecarisma" />
@@ -199,8 +213,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="N16ConvetToDecimal" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="N16ConvetToDecimal" />
+    <configuration name="N16ConvertToDecimal" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="N16ConvertToDecimal" />
       <module name="@thecarisma" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -250,7 +264,7 @@
       <item itemvalue="Application.N13TaxClassifier" />
       <item itemvalue="Application.N14NumberInWords" />
       <item itemvalue="Application.N15CompoundInterestCalculator" />
-      <item itemvalue="Application.N16ConvetToDecimal" />
+      <item itemvalue="Application.N16ConvertToDecimal" />
       <item itemvalue="Application.N17ConvertDecimalToBaseN" />
       <item itemvalue="Application.N18SimpleCGPACalculator" />
       <item itemvalue="Application.N19AttendanceRegister" />
@@ -272,8 +286,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25340393" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25718608" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -312,7 +327,14 @@
     <entry file="file://$PROJECT_DIR$/N20LoveCalculator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
-          <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
+          <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/N16ConvertToDecimal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
         </state>
       </provider>
     </entry>

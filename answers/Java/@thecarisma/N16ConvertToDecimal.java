@@ -12,7 +12,7 @@ import java.util.Scanner;
  *
  * @author Azeez Adewale <azeezadewale98@gmail.com>
  */
-public class N16ConvetToDecimal {
+public class N16ConvertToDecimal {
     
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
@@ -27,7 +27,7 @@ public class N16ConvetToDecimal {
         userInput = scanner.nextLine();
         value = Integer.parseInt(userInput);
         
-        System.out.printf("%d in base %d is %s in base 10\n", value, n, Integer.toString(value, n));        
+        System.out.printf("%d base 10 is %s base %d\n", value, Integer.toString(value, n), n);        
     }
     
 }
