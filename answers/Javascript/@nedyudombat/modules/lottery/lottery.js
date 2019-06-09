@@ -1,5 +1,5 @@
 
-const lottery = (event) => {
+const lottery = event => {
 	event.preventDefault();
 	const lotteryNumbers =  [];
 	let numbers = '';

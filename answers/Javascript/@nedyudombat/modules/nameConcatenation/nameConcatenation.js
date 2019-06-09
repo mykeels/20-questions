@@ -1,4 +1,4 @@
- const displayresult = (event) => {
+ const displayresult = event => {
   event.preventDefault();
 	const formData = new FormData(document.querySelector('#concatenationForm'));
   const user = {};

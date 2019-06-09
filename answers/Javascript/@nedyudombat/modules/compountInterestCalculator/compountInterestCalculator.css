@@ -16,12 +16,6 @@ a, h1, p {
 	padding-left: 10px;
 }
 
-.inner {
-	width: 100%;
-	background: red;
-	display: flex;
-	flex-direction: column;
-}
 
 .form {
 	display: block;
