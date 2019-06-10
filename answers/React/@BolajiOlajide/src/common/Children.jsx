@@ -19,10 +19,10 @@ import NumbersInWords from '../components/NumbersInWords';
 import CompoundInterest from '../components/CompoundInterest';
 import DecimalConverter from '../components/DecimalConverter';
 import BaseNConverter from '../components/BaseNConverter';
-
+import LoveCalculator from '../components/LoveCalculator';
 
 function Children({ page, setPage }) {
-  switch(page) {
+  switch (page) {
     case 'home':
       return <Home setPage={setPage} />;
     case 'name-concatenation':
@@ -62,6 +62,7 @@ function Children({ page, setPage }) {
     case 'cgpa':
     case 'attendance':
     case 'love':
+      return <LoveCalculator setPage={setPage} />;
     default:
       return <Home setPage={setPage} />;
   }
