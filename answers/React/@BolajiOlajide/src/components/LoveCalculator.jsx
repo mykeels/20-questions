@@ -40,7 +40,7 @@ function LoveCalculator({ setPage }) {
       />
       {lovePercentage && <p>The love percentage is {lovePercentage}%</p>}
       <button type="button" onClick={calculateLove}>
-        Calculate Love
+        Calculate Love Percentage
       </button>
     </Layout>
   );
