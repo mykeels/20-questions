@@ -1,14 +1,23 @@
 import React, { useState } from 'react';
 
+// components
 import Layout from '../common/Layout';
+
+// utils
+import { getCharacterFrequency } from '../utils/getCharacterFrequency';
+import { loveCalculatorSum } from '../utils/loveCalculatorSum';
 
 function LoveCalculator({ setPage }) {
   const [firstName, setFirstName] = useState('');
   const [crushName, setCrushName] = useState('');
+  const [lovePercentage, setLovePercentage] = useState('');
 
   const calculateLove = () => {
-    const concatenatedNames = `${firstName}${crushName}`;
-    console.log(concatenatedNames, 'concatenate');
+    const characterFrequency = getCharacterFrequency(
+      `${firstName}loves${crushName}`
+    );
+    const lovePercentage = loveCalculatorSum(characterFrequency);
+    setLovePercentage(lovePercentage);
   };
 
   return (
@@ -29,6 +38,7 @@ function LoveCalculator({ setPage }) {
         value={crushName}
         onChange={event => setCrushName(event.target.value)}
       />
+      {lovePercentage && <p>The love percentage is {lovePercentage}%</p>}
       <button type="button" onClick={calculateLove}>
         Calculate Love
       </button>
