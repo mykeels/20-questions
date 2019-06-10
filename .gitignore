@@ -95,3 +95,7 @@ typings/
 
 # VS Code
 .vscode
+
+# Java IDE
+.idea
+nbproject
