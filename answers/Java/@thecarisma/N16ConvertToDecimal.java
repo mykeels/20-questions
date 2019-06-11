@@ -16,18 +16,34 @@ public class N16ConvertToDecimal {
     
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
-        int n, value;
-        String userInput ;
+        String userInput, value ;
+        int n;
         
         System.out.print("Enter the base n value: ");
         userInput = scanner.nextLine();
         n = Integer.parseInt(userInput);
         
         System.out.print("Enter the Number you wish to convert: ");
-        userInput = scanner.nextLine();
-        value = Integer.parseInt(userInput);
+        value = scanner.nextLine();
         
-        System.out.printf("%d base 10 is %s base %d\n", value, Integer.toString(value, n), n);        
+        System.out.printf("%s base %d is %s base 10\n", value, n, convertToDecimal(value, n));        
+    }
+    
+    public static int convertToDecimal(String str, int base) {
+        int v = 0;
+        int total = 0;
+        int pow = 0;
+        str = str.toUpperCase();
+        for (int i = str.length() - 1; i >= 0; i--) {
+            char c = str.charAt(i);
+            if (c >= '0' && c <= '9')
+                v = c - '0';
+            else if (c >= 'A' && c <= 'Z')
+                v = 10 + (c - 'A');
+            total += v * Math.pow(base, pow);
+            pow++;
+        }
+        return total;
     }
     
 }
