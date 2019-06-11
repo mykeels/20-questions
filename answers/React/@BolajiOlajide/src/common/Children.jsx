@@ -20,6 +20,7 @@ import CompoundInterest from '../components/CompoundInterest';
 import DecimalConverter from '../components/DecimalConverter';
 import BaseNConverter from '../components/BaseNConverter';
 import LoveCalculator from '../components/LoveCalculator';
+import SimpleCGPACalculator from '../components/SimpleCGPACalculator';
 
 function Children({ page, setPage }) {
   switch (page) {
@@ -60,6 +61,7 @@ function Children({ page, setPage }) {
     case 'base-n-converter':
       return <BaseNConverter setPage={setPage} />;
     case 'cgpa':
+      return <SimpleCGPACalculator setPage={setPage} />;
     case 'attendance':
     case 'love':
       return <LoveCalculator setPage={setPage} />;

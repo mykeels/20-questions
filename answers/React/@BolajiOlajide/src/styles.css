@@ -104,3 +104,16 @@ button {
   padding: 2rem;
   text-align: center;
 }
+
+.student-name {
+  text-transform: capitalize;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+}
