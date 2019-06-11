@@ -14,7 +14,7 @@ function LoveCalculator({ setPage }) {
 
   const calculateLove = () => {
     const characterFrequency = getCharacterFrequency(
-      `${firstName}loves${crushName}`
+      `${firstName.toLowerCase()}loves${crushName.toLowerCase()}`
     );
     const lovePercentage = loveCalculatorSum(characterFrequency);
     setLovePercentage(lovePercentage);
