@@ -99,6 +99,7 @@ button {
   background-color: beige;
   border: 2px solid black;
   outline: 0;
+  margin-top: 10px;
   cursor: pointer;
 }
 
