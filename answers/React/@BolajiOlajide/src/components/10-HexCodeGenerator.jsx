@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, Fragment } from 'react';
 
 // components
 import Layout from '../common/Layout';
@@ -19,9 +19,19 @@ function HexCodeGenerator({ setPage }) {
 
   useEffect(() => {
     refresh();
-  }, [refresh])
+  }, [refresh]);
 
-  return <Layout setPage={setPage}>
+  const question = (
+    <Fragment>
+      <p>
+        Write a program that will output a random RGB color
+        e.g. #fca048.
+      </p>
+    </Fragment>
+  );
+  const link = "https://github.com/mykeels/20-questions#10-hex-color-generator";
+
+  return <Layout question={question} link={link}>
     <p>#{colorCode}</p>
     <div style={{ width: '20px', height: '20px', backgroundColor: `#${colorCode}` }} />
     <Button label="Refresh" onClick={refresh} />

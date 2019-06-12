@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, Fragment } from 'react';
 
 // components
 import Layout from '../common/Layout';
@@ -42,8 +42,19 @@ function TypeReverse({ setPage }) {
     refresh();
   }, [refresh]);
 
+  const question = (
+    <Fragment>
+      <p>
+        Output a random word. Ask the user to type in the reverse.<br />
+        - If the user is correct, output ✅<br />
+        - Else, output ❌
+      </p>
+    </Fragment>
+  );
+  const link = "https://github.com/mykeels/20-questions#4-type-in-reverse";
+
   return (
-    <Layout setPage={setPage}>
+    <Layout question={question} link={link}>
       <h3>Word: {randomWord}</h3>
       <input value={word} onChange={checkAndSaveInput} />
       <h3>{sign}</h3>

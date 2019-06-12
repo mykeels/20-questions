@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 
 // components
 import Layout from '../common/Layout';
@@ -23,8 +23,23 @@ function SimpleCGPACalculator({ setPage }) {
     fileReader.readAsText(file);
   };
 
+  const question = (
+    <Fragment>
+      <p>
+      Write a program to read a CSV file of student IDs, names <br />
+      and scores, and for each student, output their name, ID, <br />
+      average score and CGPA in the following format: <br />
+
+      </p>
+      <pre>
+        &lt;name&gt; (&lt;id&gt;): &lt;average-score&gt; &lt;cgpa&gt;
+      </pre>
+    </Fragment>
+  );
+  const link = "https://github.com/mykeels/20-questions#18-simple-cgpa-calculator";
+
   return (
-    <Layout setPage={setPage}>
+    <Layout question={question} link={link}>
       <label>Upload Results CSV file</label>
       <input
         type="file"

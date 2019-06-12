@@ -27,8 +27,28 @@ function TemperatureConverter({ setPage }) {
     setResult(convertedTemperature);
   };
 
+  const question = (
+    <Fragment>
+      <p>
+        Output:
+        <br />
+        <br />
+        1. Celsius to Fahrenheit<br />
+        2. Fahrenheit to Celsius<br />
+
+        Enter an option:<br />
+        If the user enters 1, ask the user to "Enter a celsius value:".<br />
+
+        Else, ask the user to "Enter a Fahrenheit value:".<br />
+
+        Convert the entered value to celsius or fahrenheit accordingly.<br />
+      </p>
+    </Fragment>
+  );
+  const link = 'https://github.com/mykeels/20-questions#5-temperature-unit-conversion'
+
   return (
-    <Layout setPage={setPage}>
+    <Layout question={question} link={link}>
       <Flex direction="column">
         <span>Choose an option</span>
         <span>1. Celsius to Fahrenheit</span>

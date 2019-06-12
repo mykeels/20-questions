@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 
 // components
 import Layout from '../common/Layout';
@@ -22,7 +22,17 @@ function FileReaderComponent({ setPage }) {
     setContent(content);
   }
 
-  return <Layout setPage={setPage}>
+  const question = (
+    <Fragment>
+      <p>
+        Write a program to read a txt file, line by line,
+        and output each line to the screen.
+      </p>
+    </Fragment>
+  );
+  const link = "https://github.com/mykeels/20-questions#7-read-line-by-line";
+
+  return <Layout question={question} link={link}>
     <input type="file" name="file" onChange={onUpload} accept=".txt" />
     <br />
     {content && (

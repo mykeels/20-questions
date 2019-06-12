@@ -17,7 +17,17 @@ function FileExtension({ setPage }) {
     setExtensions(extList)
   }
 
-  return <Layout setPage={setPage}>
+  const question = (
+    <Fragment>
+      <p>
+        Write a program to read a list of file paths,
+        and output the extension for each.
+      </p>
+    </Fragment>
+  );
+  const link = "https://github.com/mykeels/20-questions#11-extract-file-extension";
+
+  return <Layout question={question} link={link}>
     <textarea value={paths} onChange={({ target: { value }}) => setPaths(value)} rows={10} cols={30}></textarea>
     <button onClick={generateExtensions}>Get Extensions</button>
     {extensions && (

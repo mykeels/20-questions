@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 
 // components
 import Layout from '../common/Layout';
@@ -20,8 +20,18 @@ function LoveCalculator({ setPage }) {
     setLovePercentage(lovePercentage);
   };
 
+  const question = (
+    <Fragment>
+      <p>
+        Write a love calculator program that calculates
+        a love percentage, using two names.
+      </p>
+    </Fragment>
+  );
+  const link = "https://github.com/mykeels/20-questions#20-love-calculator";
+
   return (
-    <Layout setPage={setPage}>
+    <Layout question={question} link={link}>
       <input
         type="text"
         name="first name"

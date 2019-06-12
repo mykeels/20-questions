@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 
 // components
 import Layout from '../common/Layout';
@@ -31,7 +31,19 @@ function BaseNConverter() {
     setConverted(reverseString(final))
   }
 
-  return <Layout>
+  const question = (
+    <Fragment>
+      <p>
+        Write a program to convert from decimal (base 10) to base n.<br />
+        Request the value of n.<br />
+        Request the decimal value.<br />
+        Convert to base n, and output the result.
+      </p>
+    </Fragment>
+  );
+  const link = "https://github.com/mykeels/20-questions#17-convert-decimal-to-base-n";
+
+  return <Layout question={question} link={link}>
     <label>Number</label>
     <input type="number" value={number} onChange={({target}) => setNumber(target.value)} min={0} />
     <br />

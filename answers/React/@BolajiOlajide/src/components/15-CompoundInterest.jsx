@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 
 // components
 import Layout from '../common/Layout';
@@ -35,7 +35,20 @@ function CompoundInterest({ setPage }) {
     ])
   }
 
-  return <Layout setPage={setPage}>
+  const question = (
+    <Fragment>
+      <p>
+        Request the Principal.<br />
+        Request the Rate.<br />
+        Request the Time in Years.<br />
+        Calculate and output the simple interest. (P * R * T / 100).<br/>
+        For each year, calculate and output the compound interest.<br />
+      </p>
+    </Fragment>
+  );
+  const link = "https://github.com/mykeels/20-questions#15-compound-interest-calculator";
+
+  return <Layout question={question} link={link}>
     <label>Principal:</label>
     <input type="number" value={principal} onChange={({target}) => setPrincipal(target.value)} />
     <br />

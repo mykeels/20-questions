@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 // components
 import Layout from '../common/Layout';
@@ -22,7 +22,17 @@ function MultiplicationTable({ setPage }) {
     return result;
   }
 
-  return <Layout setPage={setPage}>
+  const question = (
+    <Fragment>
+      <p>
+        Using a for/while loop, write a program that prints
+        out a simple multiplication from 2 - 12.
+      </p>
+    </Fragment>
+  );
+  const link = "https://github.com/mykeels/20-questions#6-multiplication-table";
+
+  return <Layout question={question} link={link}>
     <Grid cols={11} rows={12}>
       {generateGrid()}
     </Grid>

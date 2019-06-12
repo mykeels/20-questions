@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 
 // components
 import Layout from '../common/Layout';
@@ -33,8 +33,20 @@ function Lottery({ setPage }) {
     }
   };
 
+  const question = (
+    <Fragment>
+      <p>
+        Ask the user to press any key.<br />
+        Display any 3 random space-separated digits between 0-9 e.g. 6 2 7.<br />
+        If any of them is 7, output "Congratulations!".<br />
+        Else, output "Try again! Better luck next time.".<br />
+      </p>
+    </Fragment>
+  );
+  const link = "https://github.com/mykeels/20-questions#2-lottery";
+
   return (
-    <Layout setPage={setPage}>
+    <Layout question={question} link={link}>
       <button onClick={generateNumbers}>Press me!</button>
       {visible && (
         <div>

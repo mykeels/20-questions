@@ -3,25 +3,26 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 // components
 import Home from './components/Home';
-import NameConcatenation from './components/NameConcatenation';
-import Lottery from './components/Lottery';
-import WordInReverse from './components/WordReverse';
-import TypeReverse from './components/TypeReverse';
-import TemperatureConverter from './components/TemperatureConverter';
-import MultiplicationTable from './components/MultiplicationTable';
-import FileReaderComponent from './components/FileReader';
-import FileCombiner from './components/FileCombiner';
-import RGBColorGenerator from './components/RGBColorGenerator';
-import HexCodeGenerator from './components/HexCodeGenerator';
-import FileExtension from './components/FileExtension';
-import SalaryClassifier from './components/SalaryClassifier';
-import TaxClassifier from './components/TaxClassifer';
-import NumbersInWords from './components/NumbersInWords';
-import CompoundInterest from './components/CompoundInterest';
-import DecimalConverter from './components/DecimalConverter';
-import BaseNConverter from './components/BaseNConverter';
-import LoveCalculator from './components/LoveCalculator';
-import SimpleCGPACalculator from './components/SimpleCGPACalculator';
+import NameConcatenation from './components/01-NameConcatenation';
+import Lottery from './components/02-Lottery';
+import WordInReverse from './components/03-WordReverse';
+import TypeReverse from './components/04-TypeReverse';
+import TemperatureConverter from './components/05-TemperatureConverter';
+import MultiplicationTable from './components/06-MultiplicationTable';
+import FileReaderComponent from './components/07-FileReader';
+import FileCombiner from './components/08-FileCombiner';
+import RGBColorGenerator from './components/09-RGBColorGenerator';
+import HexCodeGenerator from './components/10-HexCodeGenerator';
+import FileExtension from './components/11-FileExtension';
+import SalaryClassifier from './components/12-SalaryClassifier';
+import TaxClassifier from './components/13-TaxClassifer';
+import NumbersInWords from './components/14-NumbersInWords';
+import CompoundInterest from './components/15-CompoundInterest';
+import DecimalConverter from './components/16-DecimalConverter';
+import BaseNConverter from './components/17-BaseNConverter';
+import SimpleCGPACalculator from './components/18-SimpleCGPACalculator';
+import Attendance from './components/19-attendance';
+import LoveCalculator from './components/20-LoveCalculator';
 
 
 function App() {
@@ -46,7 +47,7 @@ function App() {
         <Route path="/16-convert-to-decimal" component={DecimalConverter} />
         <Route path="/17-convert-decimal-to-base-n" component={BaseNConverter} />
         <Route path="/18-simple-cgpa-calculator" component={SimpleCGPACalculator} />
-        <Route path="/19-attendance" component={SimpleCGPACalculator} />
+        <Route path="/19-attendance" component={Attendance} />
         <Route path="/20-love-calculator" component={LoveCalculator} />
         <Route path="*" component={Home} />
       </Switch>
