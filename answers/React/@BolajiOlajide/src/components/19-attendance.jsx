@@ -1,10 +1,39 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 
 // components
 import Layout from '../common/Layout';
 
 
 function Attendance() {
+  let fileReader;
+  const [content, setContent] = useState(null);
+
+  function studentCheck(name, index) {
+    return <Fragment key={index}>
+      <div className="attendance">
+        <span>{name}</span>
+        <select>
+          <option>-</option>
+          <option value="yes">yes</option>
+          <option value="no">no</option>
+        </select>
+      </div>
+    </Fragment>
+  }
+
+  const onUpload = ({ target }) => {
+    const file = target.files[0]
+    fileReader = new FileReader()
+    fileReader.onloadend = readFile
+    fileReader.readAsText(file)
+  }
+
+  const readFile = () => {
+    const content = fileReader.result.split('\n')
+      .map((name, index) => studentCheck(name, index));
+    setContent(content);
+  }
+
   const question = (
     <Fragment>
       <p>
@@ -19,7 +48,12 @@ function Attendance() {
 
   return (
     <Layout question={question} link={link}>
-      <p>Attendance</p>
+      <input type="file" name="file" onChange={onUpload} accept=".txt" />
+      {content && (
+        <Fragment>
+          {content}
+        </Fragment>
+      )}
     </Layout>
   )
 }

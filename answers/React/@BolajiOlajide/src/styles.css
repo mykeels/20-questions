@@ -129,3 +129,12 @@ th, td {
   background: #FFF;
   padding: 1rem;
 }
+
+.attendance {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  margin-right: 10rem;
+}
