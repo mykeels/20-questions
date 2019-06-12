@@ -15,7 +15,7 @@
   padding: 1rem;
 }
 
-.App > div {
+.App > a {
   border: 3px solid #0b0b0b;
   cursor: pointer;
   background-color: #f7f7f7;
@@ -28,9 +28,11 @@
   transition: all 1s;
   text-transform: capitalize;
   padding: 1rem;
+  text-decoration: none;
+  color: #000;
 }
 
-.App > div:hover {
+.App > a:hover {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1.3rem;
@@ -73,10 +75,12 @@ body {
   justify-content: flex-end;
 }
 
-.navigation > span {
+.navigation > a {
   cursor: pointer;
   font-weight: bold;
   text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
 }
 
 .layout-container {

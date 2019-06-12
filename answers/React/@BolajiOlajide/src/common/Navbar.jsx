@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-function Navbar({ setPage }) {
+function Navbar() {
   return <nav className="navigation">
-    <span onClick={() => setPage('home')}>Go Home!</span>
+    <Link to="/">Go Home!</Link>
   </nav>
 }
 

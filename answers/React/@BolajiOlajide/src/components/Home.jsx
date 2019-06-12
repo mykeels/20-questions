@@ -1,28 +1,29 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 function Home({ setPage }) {
   return <div className="App">
-    <div onClick={() => setPage('name-concatenation')}>Name Concatenation</div>
-    <div onClick={() => setPage('lottery')}>Lottery</div>
-    <div onClick={() => setPage('word-in-reverse')}>Word in Reverse</div>
-    <div onClick={() => setPage('type-in-reverse')}>Type in Reverse</div>
-    <div onClick={() => setPage('temp-converter')}>Temperature Unit Conversion</div>
-    <div onClick={() => setPage('multiplication')}>Multiplication Table</div>
-    <div onClick={() => setPage('file-reader')}>Read line by line</div>
-    <div onClick={() => setPage('file-combiner')}>Combine Two Files</div>
-    <div onClick={() => setPage('rgb')}>RGB Color Generator</div>
-    <div onClick={() => setPage('hex')}>Hex Color Generator</div>
-    <div onClick={() => setPage('file-extension')}>Extract File Extension</div>
-    <div onClick={() => setPage('salary')}>Salary Classifier</div>
-    <div onClick={() => setPage('tax')}>Tax Classifier</div>
-    <div onClick={() => setPage('numbers-in-words')}>Number in Words</div>
-    <div onClick={() => setPage('compound-interest')}>Compound Interest Calculator</div>
-    <div onClick={() => setPage('decimal-converter')}>Convert to Decimal</div>
-    <div onClick={() => setPage('base-n-converter')}>Convert Decimal to Base n</div>
-    <div onClick={() => setPage('cgpa')}>Simple CGPA calculator</div>
-    <div onClick={() => setPage('attendance')}>Attendance Register</div>
-    <div onClick={() => setPage('love')}>Love Calculator</div>
+    <Link to="/01-name-concatenation">Name Concatenation</Link>
+    <Link to="/02-lottery">Lottery</Link>
+    <Link to="/03-word-in-reverse">Word in Reverse</Link>
+    <Link to="/04-type-in-reverse">Type in Reverse</Link>
+    <Link to="/05-temperature-converter">Temperature Unit Conversion</Link>
+    <Link to="/06-multiplication">Multiplication Table</Link>
+    <Link to="/07-read-line">Read line by line</Link>
+    <Link to="/08-combine-files">Combine Two Files</Link>
+    <Link to="/09-rgb-color-generator">RGB Color Generator</Link>
+    <Link to="/10-hex-color-generator">Hex Color Generator</Link>
+    <Link to="/11-extract-extension">Extract File Extension</Link>
+    <Link to="/12-extract-extension">Salary Classifier</Link>
+    <Link to="/13-tax-classifier">Tax Classifier</Link>
+    <Link to="/14-number-in-words">Number in Words</Link>
+    <Link to="/15-compound-interest">Compound Interest Calculator</Link>
+    <Link to="/16-convert-to-decimal">Convert to Decimal</Link>
+    <Link to="/17-convert-decimal-to-base-n">Convert Decimal to Base n</Link>
+    <Link to="/18-simple-cgpa-calculator">Simple CGPA calculator</Link>
+    <Link to="/19-attendance">Attendance Register</Link>
+    <Link to="/20-love-calculator">Love Calculator</Link>
   </div>
 }
 

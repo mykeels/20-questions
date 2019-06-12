@@ -2,9 +2,9 @@ import React from 'react';
 import Navbar from './Navbar';
 
 
-function Layout({ children, setPage }) {
+function Layout({ children }) {
   return <div className="layout-container">
-    <Navbar setPage={setPage} />
+    <Navbar />
     <div className="layout">{children}</div>
   </div>;
 }

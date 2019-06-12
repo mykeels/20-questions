@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Layout from '../common/Layout';
 
 
-function BaseNConverter({ setPage }) {
+function BaseNConverter() {
   const [number, setNumber] = useState('');
   const [base, setBase] = useState('');
   const [converted, setConverted] = useState(null);
@@ -31,7 +31,7 @@ function BaseNConverter({ setPage }) {
     setConverted(reverseString(final))
   }
 
-  return <Layout setPage={setPage}>
+  return <Layout>
     <label>Number</label>
     <input type="number" value={number} onChange={({target}) => setNumber(target.value)} min={0} />
     <br />
