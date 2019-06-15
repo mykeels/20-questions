@@ -101,7 +101,7 @@ Write a program that will output a random RGB color e.g. `#fca048`.
 
 Write a program to read a list of file paths, and output the extension for each.
 
-[See More](./programming/11-extract-file-extension).
+[See More](./programming/11-extract-file-extension.md).
 
 ## 12. Salary Classifier
 
@@ -183,7 +183,7 @@ Write a program to read a CSV file of student IDs, names, and scores, and for ea
 <name> (<id>): <average-score> <cgpa>
 ```
 
-[See more](./programming/18-simple-cgpa-calculator).
+[See more](./programming/18-simple-cgpa-calculator.md).
 
 ## 19. Attendance Register
 
