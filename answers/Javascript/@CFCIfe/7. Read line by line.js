@@ -5,3 +5,7 @@ function readFile(file) {
 }
 
 //Note: fetch() doesn't support file: in chrome.Try to use expressJS or Chrome Web server
+var fs = require("fs");
+var text = fs.readFileSync("./test.txt");
+var textByLine = text.toString().split("\n");
+textByLine;
