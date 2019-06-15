@@ -1,5 +1,4 @@
-#SOlution to 3 question
-
+#Solution to 3 question
 import helpers
 
 user_input = input("Hello, type a word and see some magic :) ")
@@ -10,7 +9,7 @@ while(not helpers.checkEmptyString(user_input)):
 while(not helpers.isStringLengthValid(user_input)):
     user_input = input("Length is too short, type something longer :) ")
 
-#split string into a list, create an empty list 
+#split string into a list
 converted_string = list(user_input)
 converted_string.reverse()
 
@@ -21,3 +20,4 @@ for i in converted_string:
 
 
 print(reverse_string)
+
