@@ -101,7 +101,7 @@ Write a program that will output a random RGB color e.g. `#fca048`.
 
 Write a program to read a list of file paths, and output the extension for each.
 
-[See More](./programming/11-extract-file-extension).
+[See More](./programming/11-extract-file-extension.md).
 
 ## 12. Salary Classifier
 
