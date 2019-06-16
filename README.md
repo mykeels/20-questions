@@ -183,7 +183,7 @@ Write a program to read a CSV file of student IDs, names, and scores, and for ea
 <name> (<id>): <average-score> <cgpa>
 ```
 
-[See more](./programming/18-simple-cgpa-calculator).
+[See more](./programming/18-simple-cgpa-calculator.md).
 
 ## 19. Attendance Register
 
