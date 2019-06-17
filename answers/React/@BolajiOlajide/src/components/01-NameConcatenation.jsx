@@ -21,6 +21,15 @@ function Concatenation({ setPage }) {
 
   return (
     <Layout question={question} link={link}>
+      {firstName && lastName && age ? (
+        <h3>
+          Welcome, {firstName} {lastName} ({age})
+        </h3>
+      ) : null}
+
+      <br />
+      <br />
+
       <label>First Name: </label>
       <input
         value={firstName}
@@ -41,15 +50,6 @@ function Concatenation({ setPage }) {
         onChange={({ target }) => setAge(target.value)}
         type="number"
       />
-
-      <br />
-      <br />
-
-      {firstName && lastName && age ? (
-        <h3>
-          Welcome, {firstName} {lastName} ({age})
-        </h3>
-      ) : null}
     </Layout>
   );
 }
