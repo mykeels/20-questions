@@ -13,4 +13,3 @@ if __name__ == '__main__':
                 print('Invalid Entry! Please enter response again.\n')
                 response = input('Is {name} in class [yes/no]: '.format(name=line.strip('\n')))
                 response = response if response is not None else ''
-

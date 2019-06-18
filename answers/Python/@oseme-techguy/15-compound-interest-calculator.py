@@ -42,4 +42,3 @@ if __name__ == '__main__':
         print('New Principal: {principal}'.format(principal=principal))
         year += 1
     print('')
-
