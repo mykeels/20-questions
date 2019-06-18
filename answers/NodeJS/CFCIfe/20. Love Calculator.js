@@ -1,41 +1,76 @@
 var readlineSync = require("readline-sync");
 
-count = name => {
-  var value = {};
-  name
-    .split("")
-    .forEach(letter => (value[letter] ? value[letter]++ : (value[letter] = 1)));
-  return value;
+count = string => {
+  return string.split("").reduce((acc, el) => {
+    if (acc.hasOwnProperty(el)) acc[el]++;
+    else acc[el] = 1;
+    return acc;
+  }, {});
 };
 
-module.exports = function loveCalc() {
-  var firstName = readlineSync.question("First name: ");
-  var secondName = readlineSync.question("Second name: ");
+function loveCalc() {
+  let firstName = readlineSync.question("First name: "),
+    secondName = readlineSync.question("Second name: "),
+    name = firstName.toLowerCase() + "loves" + secondName.toLowerCase(),
+    nameObj = count(name),
+    nameArr = name.split(""),
+    objCount = [];
 
-  var names = firstName.toLowerCase() + "loves" + secondName.toLowerCase();
-  var obj = count(names);
-  objCount = [];
-  for (let key in obj) {
-    objCount.push(obj[key]);
+  for (let i = 0; i < nameArr.length; i++) {
+    let occurArr = nameObj[nameArr[i]];
+    objCount.push(occurArr);
   }
+  return parseInt(objCount.join(""), 10);
+}
 
-  while (objCount.length > 2) {
-    midRange = objCount.length / 2;
-    percentValue = [];
-    for (
-      let i = 0, j = objCount.length - 1;
-      i < objCount.length && j >= 0;
-      i++, j--
-    ) {
-      var leftMost = objCount[i];
-      var rightMost = objCount[j];
-      if (i == midRange) {
-        if (objCount.length % 2 === 0) break;
-        j = 0;
-        rightMost = 0;
+module.exports = function findPercent() {
+  let num = loveCalc();
+  let arrNum = num
+    .toString()
+    .split("")
+    .map(item => parseInt(item));
+
+  function sumArray(array) {
+    let sum = 0,
+      numLatest = [];
+
+    if (array.length % 2 === 0) {
+      for (
+        let x = 0, y = array.length - 1;
+        x <= Math.floor((array.length - 1) / 2) &&
+        y >= Math.ceil((array.length - 1) / 2);
+        x++, y--
+      ) {
+        sum = array[x] + array[y];
+        numLatest.push(sum);
       }
-      percentValue.push(leftMost + rightMost);
+    } else {
+      let middleNum = array[Math.ceil((array.length - 1) / 2)];
+      for (
+        let x = 0, y = array.length - 1;
+        x < Math.floor((array.length - 1) / 2) &&
+        y > Math.ceil((array.length - 1) / 2);
+        x++, y--
+      ) {
+        sum = array[x] + array[y];
+        numLatest.push(sum);
+      }
+      numLatest = [numLatest, middleNum];
     }
+    numLatest =
+      numLatest[0].length > 1
+        ? numLatest.flat()
+        : [
+            ...numLatest
+              .join("")
+              .split("")
+              .map(item => parseInt(item))
+          ];
+    return numLatest;
   }
-  return percentValue;
+  while (arrNum.length > 2) {
+    arrNum = sumArray(arrNum);
+  }
+  finalAnswer = arrNum.join("");
+  return `The love percentage is ${finalAnswer}%`;
 };

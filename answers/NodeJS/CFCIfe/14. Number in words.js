@@ -2,8 +2,7 @@ const readlineSync = require("readline-sync");
 
 module.exports = function numToWords() {
   let user = readlineSync.questionInt("Enter a number: "),
-    userNum = Number(user),
-    arrOfNumber = user.split(""),
+    arrOfNumber = user.toString().split(""),
     unit = arrOfNumber.slice(-1),
     tens = arrOfNumber.slice(-2, -1),
     hundreds = arrOfNumber.slice(-3, -2),
@@ -41,19 +40,19 @@ module.exports = function numToWords() {
       "ninety"
     ];
 
-  if ((arrOfNumber.length === 1 || arrOfNumber.length === 2) && userNum < 20) {
-    return unitNames[userNum - 1];
+  if ((arrOfNumber.length === 1 || arrOfNumber.length === 2) && user < 20) {
+    return unitNames[user - 1];
   }
   if (
     (arrOfNumber.length === 1 || arrOfNumber.length === 2) &&
-    userNum >= 20 &&
+    user >= 20 &&
     unit == 0
   ) {
     return tensNames[tens - 1];
   }
   if (
     (arrOfNumber.length === 1 || arrOfNumber.length === 2) &&
-    userNum >= 20 &&
+    user >= 20 &&
     unit != 0
   ) {
     return `${tensNames[tens - 1]}-${unitNames[unit - 1]}`;

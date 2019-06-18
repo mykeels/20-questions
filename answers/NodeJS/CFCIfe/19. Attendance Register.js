@@ -8,7 +8,7 @@ module.exports = function rollCall() {
   nameByLine
     .map(e => e.trim())
     .forEach(name => {
-      let userResp = readlineSync.question(`Is ${name} in class: `);
+      let userResp = readlineSync.question(`Is ${name} in class (Yes/No): `);
       if (userResp.toLowerCase() == "yes") {
         present = `${name}:\t\t✅}`;
         attendance.push(present);
@@ -17,6 +17,6 @@ module.exports = function rollCall() {
         attendance.push(absent);
       }
     });
-  attendance;
-  return fs.writeFileSync("./updatedRegister.txt", attendance.join("\n"));
+  fs.writeFileSync("./updatedRegister.txt", attendance.join("\n"));
+  return "Check updated register for the attendance. Thanks";
 };
