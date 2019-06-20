@@ -3,7 +3,7 @@
 """
 
 if __name__ == '__main__':
-    filepath = './answers/Python/@oseme-techguy/data/18-simple-cgpa-calculator.csv'
+    filepath = './data/18-simple-cgpa-calculator.csv'
     with open(filepath, encoding='utf-8') as file:
         for index, line in enumerate(file):
             if index == 0:
