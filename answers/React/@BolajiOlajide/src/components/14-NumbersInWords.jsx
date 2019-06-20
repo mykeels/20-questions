@@ -7,7 +7,6 @@ import Layout from '../common/Layout';
 import IntToEnglish from '../utils/numToWords';
 
 const intToEnglish = new IntToEnglish();
-console.log(intToEnglish);
 
 function NumbersInWords() {
   const [number, setNumber] = useState(0);

@@ -50,7 +50,6 @@ class IntToEnglish {
     }
     if (mod > 0) {
       word = `${word}${this.convert_nn(mod)}`;
-      // word = word + convert_nn(mod);
     }
     return word;
   }
@@ -71,11 +70,8 @@ class IntToEnglish {
         const mod = Math.pow(1000, didx);
         const l = parseInt((value / mod), 10);
         const r = value - (l * mod);
-        // let ret = convert_nnn(l) + " " + denom[didx];
         let ret = `${this.convert_nnn(l)} ${this.denom[didx]}`;
-        console.log(r, '<== r')
         if (r > 0) {
-          // ret = ret + ", " + english_number(r);
           const separator = (r < 1000) ? ' and' : ','
           ret = `${ret}${separator} ${this.english_number(r)}`;
         }
