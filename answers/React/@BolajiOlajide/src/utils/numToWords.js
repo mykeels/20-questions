@@ -1,82 +1,88 @@
-// COPY & PASTE 😆 =======> https://jsfiddle.net/lesson8/5tt7d3e6/
-export function numToWords(amount) {
-  var words = [];
-  words[0] = '';
-  words[1] = 'One';
-  words[2] = 'Two';
-  words[3] = 'Three';
-  words[4] = 'Four';
-  words[5] = 'Five';
-  words[6] = 'Six';
-  words[7] = 'Seven';
-  words[8] = 'Eight';
-  words[9] = 'Nine';
-  words[10] = 'Ten';
-  words[11] = 'Eleven';
-  words[12] = 'Twelve';
-  words[13] = 'Thirteen';
-  words[14] = 'Fourteen';
-  words[15] = 'Fifteen';
-  words[16] = 'Sixteen';
-  words[17] = 'Seventeen';
-  words[18] = 'Eighteen';
-  words[19] = 'Nineteen';
-  words[20] = 'Twenty';
-  words[30] = 'Thirty';
-  words[40] = 'Forty';
-  words[50] = 'Fifty';
-  words[60] = 'Sixty';
-  words[70] = 'Seventy';
-  words[80] = 'Eighty';
-  words[90] = 'Ninety';
-  amount = amount.toString();
-  var atemp = amount.split(".");
-  var number = atemp[0].split(",").join("");
-  var n_length = number.length;
-  var words_string = "";
-  if (n_length <= 9) {
-    var n_array = [0, 0, 0, 0, 0, 0, 0, 0, 0];
-    var received_n_array = [];
-    for (let i = 0; i < n_length; i++) {
-      received_n_array[i] = number.substr(i, 1);
+class IntToEnglish {
+  // based on https://stackoverflow.com/questions/3299619/algorithm-that-converts-numeric-amount-into-english-words/3299672#3299672
+  to_19 = ["zero",  "one",   "two",  "three", "four",   "five",   "six",
+    "seven", "eight", "nine", "ten",   "eleven", "twelve", "thirteen",
+    "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"];
+
+  tens = ["twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
+
+  denom = ["",
+    "thousand",     "million",         "billion",       "trillion",       "quadrillion",
+    "quintillion",  "sextillion",      "septillion",    "octillion",      "nonillion",
+    "decillion",    "undecillion",     "duodecillion",  "tredecillion",   "quattuordecillion",
+    "sexdecillion", "septendecillion", "octodecillion", "novemdecillion", "vigintillion"];
+
+
+
+    num_to_words = (amount) => {
+      const intAmount = parseInt(amount, 10);
+      return this.english_number(intAmount)
     }
-    for (let i = 9 - n_length, j = 0; i < 9; i++ , j++) {
-      n_array[i] = received_n_array[j];
+
+  convert_nn = (value) => {
+    if (value < 20) {
+      return this.to_19[value]
     }
-    for (let i = 0, j = 1; i < 9; i++ , j++) {
-      if (i === 0 || i === 2 || i === 4 || i === 7) {
-        if (n_array[i] === 1) {
-          n_array[j] = 10 + parseInt(n_array[j]);
-          n_array[i] = 0;
-        }
+    for (let index = 0; index < this.tens.length; index++) {
+      const dcap = this.tens[index];
+      const dval = 20 + 10 * index;
+      if (dval + 10 > value) {
+          if ((value % 10) !== 0) {
+            const remainder = this.to_19[value % 10]
+            return `${dcap}-${remainder}`;
+          }
+          return dcap;
       }
     }
-    let value = "";
-    for (let i = 0; i < 9; i++) {
-      if (i === 0 || i === 2 || i === 4 || i === 7) {
-        value = n_array[i] * 10;
-      } else {
-        value = n_array[i];
-      }
-      if (value !== 0) {
-        words_string += words[value] + " ";
-      }
-      if ((i === 1 && value !== 0) || (i === 0 && value !== 0 && n_array[i + 1] === 0)) {
-        words_string += "Crores ";
-      }
-      if ((i === 3 && value !== 0) || (i === 2 && value !== 0 && n_array[i + 1] === 0)) {
-        words_string += "Lakhs ";
-      }
-      if ((i === 5 && value !== 0) || (i === 4 && value !== 0 && n_array[i + 1] === 0)) {
-        words_string += "Thousand ";
-      }
-      if (i === 6 && value !== 0 && (n_array[i + 1] !== 0 && n_array[i + 2] !== 0)) {
-        words_string += "Hundred and ";
-      } else if (i === 6 && value !== 0) {
-        words_string += "Hundred ";
-      }
-    }
-    words_string = words_string.split("  ").join(" ");
+    throw Error("Should never get here, less than 100 failure")
   }
-  return words_string;
+
+  convert_nnn = (value) => {
+    let word = '';
+    const rem = parseInt((value / 100), 10);
+    const mod = value % 100;
+    if (rem > 0) {
+      const b = this.to_19[rem];
+      word = `${b} hundred`;
+      if (mod > 0) {
+        word = `${word} and `;
+      }
+    }
+    if (mod > 0) {
+      word = `${word}${this.convert_nn(mod)}`;
+      // word = word + convert_nn(mod);
+    }
+    return word;
+  }
+
+  english_number = (value) => {
+    if (value < 100) {
+      return this.convert_nn(value);
+    }
+
+    if (value < 1000) {
+      return this.convert_nnn(value);
+    }
+
+    for (let index = 0; index < this.denom.length; index++) {
+      const didx = index - 1;
+      const dval = Math.pow(1000, index);
+      if (dval > value) {
+        const mod = Math.pow(1000, didx);
+        const l = parseInt((value / mod), 10);
+        const r = value - (l * mod);
+        // let ret = convert_nnn(l) + " " + denom[didx];
+        let ret = `${this.convert_nnn(l)} ${this.denom[didx]}`;
+        console.log(r, '<== r')
+        if (r > 0) {
+          // ret = ret + ", " + english_number(r);
+          const separator = (r < 1000) ? ' and' : ','
+          ret = `${ret}${separator} ${this.english_number(r)}`;
+        }
+        return ret;
+      }
+  }
+  }
 }
+
+export default IntToEnglish;

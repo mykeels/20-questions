@@ -8,7 +8,7 @@ import Button from '../common/Button';
 import { randomWords } from '../utils/randomwords';
 
 
-function TypeReverse({ setPage }) {
+function TypeReverse() {
   const [word, setWord] = useState("");
   const [randomWord, setRandomWord] = useState("");
   const [reverseRandomWord, setReverseRandomWord] = useState("");

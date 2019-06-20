@@ -4,7 +4,7 @@ import React, { useState, Fragment } from 'react';
 import Layout from '../common/Layout';
 
 
-function FileCombiner({ setPage }) {
+function FileCombiner() {
   let fileReader;
   const [content, setContent] = useState([]);
 

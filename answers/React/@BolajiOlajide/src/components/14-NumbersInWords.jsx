@@ -4,16 +4,19 @@ import React, { useState, Fragment } from 'react';
 import Layout from '../common/Layout';
 
 // utils
-import { numToWords } from '../utils/numToWords';
+import IntToEnglish from '../utils/numToWords';
 
-function NumbersInWords({ setPage }) {
+const intToEnglish = new IntToEnglish();
+console.log(intToEnglish);
+
+function NumbersInWords() {
   const [number, setNumber] = useState(0);
   const [numberInWords, setNumberInWords] = useState('');
 
   const convertToWords = ({ target: { value } }) => {
     setNumber(value);
 
-    const numberWord = numToWords(value)
+    const numberWord = intToEnglish.num_to_words(value)
     setNumberInWords(numberWord)
   }
 

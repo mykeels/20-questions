@@ -6,7 +6,7 @@ import Layout from '../common/Layout';
 // utils
 import { calculateCGPA } from '../utils/calculateCGPA';
 
-function SimpleCGPACalculator({ setPage }) {
+function SimpleCGPACalculator() {
   const [fileContent, setFileContent] = useState([]);
   const fileReader = new FileReader();
 

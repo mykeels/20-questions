@@ -4,7 +4,7 @@ import React, { useState, Fragment } from 'react';
 import Layout from '../common/Layout';
 
 
-function WordInReverse({ setPage }) {
+function WordInReverse() {
   const [word, setWord] = useState(null);
 
   function reverseString(str) {

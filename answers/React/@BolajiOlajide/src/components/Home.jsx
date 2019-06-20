@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-function Home({ setPage }) {
+function Home() {
   return <div className="App">
     <Link to="/01-name-concatenation">Name Concatenation</Link>
     <Link to="/02-lottery">Lottery</Link>

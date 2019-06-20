@@ -7,7 +7,7 @@ import Layout from '../common/Layout';
 import { generateUniqueKey } from '../utils/generateUniqueKey';
 
 
-function CompoundInterest({ setPage }) {
+function CompoundInterest() {
   const [principal, setPrincipal] = useState(0);
   const [rate, setRate] = useState(0);
   const [time, setTime] = useState(0);

@@ -8,7 +8,7 @@ import Grid from '../common/Grid';
 import { generateUniqueKey } from '../utils/generateUniqueKey';
 
 
-function MultiplicationTable({ setPage }) {
+function MultiplicationTable() {
   const generateGrid = () => {
     const result = [];
     for (let i = 1; i <= 12; i++) {

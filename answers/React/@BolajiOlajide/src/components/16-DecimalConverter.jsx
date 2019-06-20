@@ -4,7 +4,7 @@ import React, { useState, Fragment } from 'react';
 import Layout from '../common/Layout';
 
 
-function DecimalConverter({ setPage }) {
+function DecimalConverter() {
   const [number, setNumber] = useState('');
   const [base, setBase] = useState('');
   const [converted, setConverted] = useState(null);

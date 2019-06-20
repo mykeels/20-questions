@@ -4,7 +4,7 @@ import React, { useState, Fragment } from 'react';
 import Layout from '../common/Layout';
 
 
-function SalaryClassifier({ setPage }) {
+function SalaryClassifier() {
   const [salary, setSalary] = useState(0);
   const [earnLevel, setEarnLevel] = useState('');
 

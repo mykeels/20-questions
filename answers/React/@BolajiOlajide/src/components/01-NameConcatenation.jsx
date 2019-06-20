@@ -4,7 +4,7 @@ import React, { useState, Fragment } from 'react';
 import Layout from '../common/Layout';
 
 
-function Concatenation({ setPage }) {
+function Concatenation() {
   const [firstName, setfirstName] = useState("");
   const [lastName, setlastName] = useState("");
   const [age, setAge] = useState("");

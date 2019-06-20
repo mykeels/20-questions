@@ -4,7 +4,7 @@ import React, { useState, Fragment } from 'react';
 import Layout from '../common/Layout';
 import Flex from '../common/Flex';
 
-function Lottery({ setPage }) {
+function Lottery() {
   const [firstNumber, setFirstNumber] = useState(0);
   const [secondNumber, setSecondNumber] = useState(0);
   const [thirdNumber, setThirdNumber] = useState(0);

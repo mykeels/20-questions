@@ -5,7 +5,7 @@ import Layout from '../common/Layout';
 import Flex from '../common/Flex';
 
 
-function TemperatureConverter({ setPage }) {
+function TemperatureConverter() {
   const [option, setOption] = useState(0);
   const [result, setResult] = useState("");
   const [temperature, setTemperature] = useState("");

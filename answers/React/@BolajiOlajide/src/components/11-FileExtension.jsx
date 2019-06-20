@@ -4,7 +4,7 @@ import React, { useState, Fragment } from 'react';
 import Layout from '../common/Layout';
 
 
-function FileExtension({ setPage }) {
+function FileExtension() {
   const [paths, setPaths] = useState('');
   const [extensions, setExtensions] = useState(null);
 

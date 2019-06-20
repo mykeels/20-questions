@@ -5,7 +5,7 @@ import Layout from '../common/Layout';
 import Button from '../common/Button';
 
 
-function RGBColorGenerator({ setPage }) {
+function RGBColorGenerator() {
   const [colorCode, setColorCode] = useState(null);
   const generateRGB = () => {
     const MAX = 256;

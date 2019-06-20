@@ -7,7 +7,7 @@ import Layout from '../common/Layout';
 import { getCharacterFrequency } from '../utils/getCharacterFrequency';
 import { loveCalculatorSum } from '../utils/loveCalculatorSum';
 
-function LoveCalculator({ setPage }) {
+function LoveCalculator() {
   const [firstName, setFirstName] = useState('');
   const [crushName, setCrushName] = useState('');
   const [lovePercentage, setLovePercentage] = useState('');

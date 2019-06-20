@@ -5,7 +5,7 @@ import Layout from '../common/Layout';
 import Button from '../common/Button';
 
 
-function HexCodeGenerator({ setPage }) {
+function HexCodeGenerator() {
   const [colorCode, setColorCode] = useState(null);
   const generateHex = () => {
     const MAX = 16;
