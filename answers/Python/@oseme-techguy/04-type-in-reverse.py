@@ -22,17 +22,18 @@ def generate_random_word(word_length):
     return random_word
 
 if __name__ == '__main__':
-    # generate the random word
-    word_length = 5
-    random_word = generate_random_word(word_length)
-    reverse_random_word = reverse_word(random_word)
+    while True:
+        # generate the random word
+        word_length = 5
+        random_word = generate_random_word(word_length)
+        reverse_random_word = reverse_word(random_word)
 
-    # display to user
-    # get input from user and compare
-    input_word = input('Type {word} in reverse: '.format(word=random_word))
-    input_word = str(input_word).lower()
+        # display to user
+        # get input from user and compare
+        input_word = input('Type {word} in reverse: '.format(word=random_word))
+        input_word = str(input_word).lower()
 
-    if input_word == reverse_random_word.lower():
-        print("✅\n")
-    else:
-        print("❌\n")
+        if input_word == reverse_random_word.lower():
+            print("✅\n")
+        else:
+            print("❌\n")

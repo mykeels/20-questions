@@ -40,7 +40,7 @@ def thousand_to_words(number):
     if rem > 0:
         word = zero_to_nineteen_map[rem] + ' hundred'
         if mod > 0:
-            word = word + ' '
+            word = word + ' and '
     if mod > 0:
         word = word + hundred_to_words(mod)
     return word
