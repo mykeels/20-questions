@@ -1,7 +1,6 @@
-var http = require("http");
 const readlineSync = require("readline-sync");
 
-compoundInterest = () => {
+function compoundInterest() {
   let principal = readlineSync.questionInt("Enter Principal: "),
     rate = readlineSync.questionInt("Enter rate: "),
     time = readlineSync.questionInt("Enter Time (in years): "),
@@ -15,12 +14,6 @@ compoundInterest = () => {
   return [
     "The simple interest at the end of " + time + " years is: " + simpleInterest
   ].concat(arr);
-};
+}
 
-http
-  .createServer(function(req, res) {
-    res.writeHead(200, { "Content-Type": "text/plain" });
-    res.end(compoundInterest());
-  })
-  .listen(8080, "127.0.0.1");
-console.log("Server running at http://127.0.0.1:8080/");
+console.log(compoundInterest());

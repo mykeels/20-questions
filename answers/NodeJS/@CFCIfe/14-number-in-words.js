@@ -1,7 +1,6 @@
-var http = require("http");
 const readlineSync = require("readline-sync");
 
-function numToWords() {
+function numInWords() {
   let user = readlineSync.questionInt("Enter a number: "),
     arrOfNumber = user.toString().split(""),
     unit = arrOfNumber.slice(-1),
@@ -78,10 +77,4 @@ function numToWords() {
   return null;
 }
 
-http
-  .createServer(function(req, res) {
-    res.writeHead(200, { "Content-Type": "text/plain" });
-    res.end(numToWords());
-  })
-  .listen(8080, "127.0.0.1");
-console.log("Server running at http://127.0.0.1:8080/");
+console.log(numInWords());

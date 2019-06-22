@@ -1,16 +1,15 @@
 // Used papa parse to parse csv to json
 // run in node server not console
-let http = require("http");
-let fs = require("fs");
-let file = "./data/18-simple-cgpa-calculator.csv";
-let content = fs.readFileSync(file, "utf8");
-let Papa = require("papaparse");
+let fs = require("fs"),
+  Papa = require("papaparse");
 
-let result = Papa.parse(content, {
-  complete: function(results) {
-    results.data;
-  }
-});
+let file = "./data/18-simple-cgpa-calculator.csv",
+  content = fs.readFileSync(file, "utf8"),
+  result = Papa.parse(content, {
+    complete: function(results) {
+      results.data;
+    }
+  });
 
 //return <name> (<id>): <average-score> <cgpa>
 function calcCGPA() {
@@ -33,10 +32,4 @@ function calcCGPA() {
   return cgpaResult.join("\n");
 }
 
-http
-  .createServer(function(req, res) {
-    res.writeHead(200, { "Content-Type": "text/plain" });
-    res.end(calcCGPA());
-  })
-  .listen(8080, "127.0.0.1");
-console.log("Server running at http://127.0.0.1:8080/");
+console.log(calcCGPA());

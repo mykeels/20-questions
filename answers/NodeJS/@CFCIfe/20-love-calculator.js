@@ -1,13 +1,15 @@
-var http = require("http");
-var readlineSync = require("readline-sync");
+const readlineSync = require("readline-sync");
 
-count = string => {
+function count(string) {
   return string.split("").reduce((acc, el) => {
-    if (acc.hasOwnProperty(el)) acc[el]++;
-    else acc[el] = 1;
+    if (acc.hasOwnProperty(el)) {
+      acc[el]++;
+    } else {
+      acc[el] = 1;
+    }
     return acc;
   }, {});
-};
+}
 
 function loveCalc() {
   let firstName = readlineSync.question("First name: "),
@@ -25,11 +27,11 @@ function loveCalc() {
 }
 
 function findPercent() {
-  let num = loveCalc();
-  let arrNum = num
-    .toString()
-    .split("")
-    .map(item => parseInt(item));
+  let num = loveCalc(),
+    arrNum = num
+      .toString()
+      .split("")
+      .map(item => parseInt(item));
 
   function sumArray(array) {
     let sum = 0,
@@ -76,10 +78,4 @@ function findPercent() {
   return `The love percentage is ${finalAnswer}%`;
 }
 
-http
-  .createServer(function(req, res) {
-    res.writeHead(200, { "Content-Type": "text/plain" });
-    res.end(findPercent());
-  })
-  .listen(8080, "127.0.0.1");
-console.log("Server running at http://127.0.0.1:8080/");
+console.log(findPercent());
