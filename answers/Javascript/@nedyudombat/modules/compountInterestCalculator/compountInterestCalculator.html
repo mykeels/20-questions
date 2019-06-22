@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>20 Solutions || Compound Interest Calculator</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="compountInterestCalculator.css">
+  </head>
+  <body>
+		<div class="content">
+			<nav class="nav">
+				<a href="../../index.html">Home</a>
+			</nav>
+			<header>
+				<h1 class="text-center">Compound Interest Calculator</h1>
+			</header>
+			<form action="" id="interestForm" class="form">
+				<input class="form-control" placeholder="Principal" type="number" name="principal"  onkeyup="calculateCompoundIterest(event);"> 
+				<input class="form-control" placeholder="Rate" type="number" name="rate" onkeyup="calculateCompoundIterest(event);"> 
+				<input class="form-control" placeholder="Time in years" type="number" name="years" onkeyup="calculateCompoundIterest(event);"> 
+				<div class="result"></div>
+			</form>
+		</div>
+
+		<script src="compountInterestCalculator.js"></script>
+	</body>
+</html>

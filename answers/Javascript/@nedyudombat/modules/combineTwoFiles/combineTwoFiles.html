@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>20 Solutions || Combine Two Files</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="combineTwoFiles.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  </head>
+  <body>
+		<div class="content">
+			<nav class="nav">
+				<a href="../../index.html">Home</a>
+			</nav>
+			<header>
+				<h1 class="text-center">Combine Two Files</h1>
+			</header>
+			<form action="" id="fileReaderForm" class="form">
+				<label for="file">File 1</label>
+				<input class="form-control" onchange="readFile();" accept=".txt" type="file" id="file"> 
+				<label for="file2">File 2</label>
+				<input class="form-control" onchange="readFile2();" accept=".txt" type="file" id="file2"> 
+				<div class="result"></div>
+			</form>
+		</div>
+
+		<script src="combineTwoFiles.js"></script>
+	</body>
+</html>
