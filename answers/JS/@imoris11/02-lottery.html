@@ -1,0 +1,44 @@
+<html>
+<!--
+Ask the user to press any key.
+
+Display any 3 random space-separated digits between 0-9 e.g. 6 2 7.
+
+If any of them is 7, output "Congratulations!".
+
+Else, output "Try again! Better luck next time.".
+
+Variant 3
+-->
+
+<body>
+  <i>You win if all numbers generated are even. </i>
+  <br />
+  <button onclick="generateRandomNumbers()"> Generate Numbers </button>
+  <h1 id="numbers"><h1>
+  <h3 id="answer"><h3>
+
+  <script>
+  let generateRandomNumbers = () => {
+    //Generate numbers
+    let numbers = [];
+    for (let i = 0; i<3; i++) {
+      let randomNumber = Math.floor(Math.random() * 10 );
+      numbers.push(randomNumber);
+    }
+
+    //Check how many evens
+    let evenNumbers = 0;
+    numbers.forEach((number)=> number % 2 === 0 && evenNumbers ++);
+
+    let message = evenNumbers === 3 ? " Congratulations! " : " Try again! Better luck next time.";
+    //Show result on page
+    document.getElementById("numbers").innerHTML =
+    `${numbers[0]} ${numbers[1]} ${numbers[2]}`
+
+    document.getElementById("answer").innerHTML =
+    `${message}`
+  }
+  </script>
+</body>
+</html>

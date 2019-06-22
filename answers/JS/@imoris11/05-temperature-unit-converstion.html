@@ -1,0 +1,72 @@
+<html>
+<!--
+1. Celsius to Fahrenheit
+2. Fahrenheit to Celsius
+
+Enter an option:
+DOWNLOAD <emmet>
+-->
+
+<body>
+  <br />
+  <button id="chooseBtn" onclick="chooseOption()"> Choose an option </button>
+  <h3>1. Celcius to Fahreinheit</h3>
+  <h3>2. Fahrenheit to Celcius </h3>
+  <h3>3. Celcius to Kelvin </h3>
+  <h3>4. Kelvin to Celcius </h3>
+  <h3>5. Fahrenheit to Kelvin </h3>
+  <h3>6. Kelvin to Fahrenheit </h3>
+
+
+  <h1 id="answer"><h1>
+
+  <script>
+  let chooseOption = () => {
+       let option = prompt("Please choose an option", "");
+      if (Number(option)){
+        let degree = prompt("Please enter temperature", "")
+        convertTemp(Number(option), degree)
+      }
+    }
+
+  let convertTemp = (option, degree) => {
+    let d = 0;
+    switch (option) {
+      case 1:
+        //convert c to f
+        d = ((9/5) * degree) + 32;
+        document.getElementById("answer").innerHTML = `${degree} C is ${d.toFixed(2)} F`;
+        break;
+      case 2:
+        //convert f to c
+          d = (degree - 32) * 5/9;
+          document.getElementById("answer").innerHTML = `${degree} F is ${d.toFixed(2)} C`;
+        break;
+      case 3:
+        //convert c to k
+        d = Number(degree) + 273.15;
+        document.getElementById("answer").innerHTML = `${degree} C is ${d.toFixed(2)} K`;
+        break;
+      case 4:
+        //convert k to c
+        d = Number(degree) - 273.15;
+        document.getElementById("answer").innerHTML = `${degree} K is ${d.toFixed(2)} C`;
+        break;
+      case 5:
+        //convert f to k
+        d = (degree - 32) * 5/9 + 273.15;
+        document.getElementById("answer").innerHTML = `${degree} F is ${d.toFixed(2)} K`;
+        break;
+      case 6:
+        //convert k to f
+        d = (Number(degree) - 273.15) * (9/5) + 32;
+        document.getElementById("answer").innerHTML = `${degree} K is ${d.toFixed(1)} F`;
+        break;
+      default:
+        document.getElementById("answer").innerHTML = `Invalid option`
+
+    }
+  }
+  </script>
+</body>
+</html>

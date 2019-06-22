@@ -1,0 +1,69 @@
+<html>
+<!--
+RGB Color Generator
+
+Write a program that will output a random RGB color e.g. rgb(252, 160, 72).
+
+Things to consider
+
+Every RGB Color has 3 parts.
+
+Red (R) a number between 0 and 255
+
+Green (G) a number between 0 and 255
+
+Blue (B) a number between 0 and 255
+-->
+
+<body>
+  <button onclick="generateColor()"> Generate RGB Color </button>
+  <h3 id="answer"><h3>
+
+  <script>
+  let generateColor = () => {
+    //Generate numbers
+    let red  = convertToHex(Math.floor(Math.random() * 256 ));
+    let green = convertToHex(Math.floor(Math.random() * 256 ));
+    let blue = convertToHex(Math.floor(Math.random() * 256 ));
+    //Show result on page
+    let color = red + green + blue;
+    document.getElementById("answer").innerHTML =
+    `#${color}`
+    document.getElementById("answer").style.color = `#${color}`
+  }
+
+  let switchHex = (dec) => {
+    switch (dec) {
+      case 10:
+        return 'A';
+        break;
+      case 11:
+        return 'B';
+        break;
+      case 12:
+        return 'C';
+        break;
+      case 13:
+        return 'D';
+        break;
+      case 14:
+        return 'E';
+        break;
+      case 15:
+        return 'F';
+        break;
+      default:
+        return dec;
+    }
+  }
+  let convertToHex = (dec) => {
+    let hex = "";
+    while (dec > 1) {
+      hex = switchHex(dec%16) + hex;
+      dec = Number(Math.floor(dec/16));
+    }
+    return hex;
+  }
+  </script>
+</body>
+</html>

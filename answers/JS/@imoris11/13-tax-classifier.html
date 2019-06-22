@@ -1,0 +1,38 @@
+<html>
+<!--
+Ask the user to enter a salary amount.
+
+If the salary is < 50,000, output Tax: 5 / 100 * salary.
+
+Else, if the salary is less than 200,000, output Tax: 10 / 100 * salary.
+
+Else, output Tax: 15 / 100 * salary.
+
+
+-->
+
+<body>
+  <h3 id="answer"><h3>
+
+  <script>
+  let getSalary = () => {
+    //Get user input
+    let salary = prompt("Please enter your salary", "");
+    let result = "";
+    //Ensure salary is valid
+    if (salary !== "" && Number(salary) > 0 ) {
+      //Get salary classification
+      if (salary > 200000) result = `Tax: 15 / 100 * salary (${15 / 100 * Number(salary)})`;
+      else if (salary > 50000) result = `Tax: 10 / 100 * salary (${10 / 100 * Number(salary)})`;
+      else result = `Tax: 5 / 100 * salary (${5 / 100 * Number(salary)})`;
+    }else{
+      result = "Invalid salary amount";
+    }
+    //Show result on page
+    document.getElementById("answer").innerHTML =
+    `${result}`
+  }
+  getSalary();
+  </script>
+</body>
+</html>

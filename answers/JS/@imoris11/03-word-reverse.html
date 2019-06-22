@@ -1,0 +1,35 @@
+<html>
+<!--
+Ask the user to enter a sentence, and output the reverse of each word.
+
+E.g. I am a boy becomes I ma a yob.
+
+Variant 2
+-->
+
+<body>
+  <br />
+  <button onclick="reverseSentence()"> Enter Sentence </button>
+  <h3 id="answer"><h3>
+
+  <script>
+  let reverseSentence = () => {
+    //Reverse sentence with es6 functions
+    let sentence = prompt("Enter sentence", "")
+    if (sentence !== ""){
+      /*
+      1. Split sentence into an array of words
+      2. Split each word to array of characters
+      3. Reverse the characters in each word array, join back characters
+      4. Join the string
+        A STRING IS AN ARRAY OF WORDS, WORDS ARE ARRAYS OF CHARACTERS
+      */
+      sentence = sentence.split(' ').map((word) => word.split('').reverse().join('')).join(' ')
+      //Show result on page
+      document.getElementById("answer").innerHTML =
+      `${sentence}`
+    }
+  }
+  </script>
+</body>
+</html>
