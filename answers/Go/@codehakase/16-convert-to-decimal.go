@@ -11,10 +11,10 @@ func main() {
 		value string
 	)
 	fmt.Println("Enter the value of base n: ")
-	fmt.Scanf("%d", &n)
+	fmt.Scanf("%d\n", &n)
 
 	fmt.Printf("Enter the base %d value you wish to convert: ", n)
-	fmt.Scanf("%s", &value)
+	fmt.Scanf("%s\n", &value)
 
 	fmt.Printf("%s base %d = %d base 10", value, n, toBase10(value, n))
 }

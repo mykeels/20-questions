@@ -24,7 +24,7 @@ func main() {
 	for scanner.Scan() {
 		name := scanner.Text()
 		fmt.Printf("Is %s in class? [yes/no]: ", name)
-		fmt.Scanf("%s", &input)
+		fmt.Scanf("%s\n", &input)
 		if input != "yes" && input != "no" {
 			fmt.Println("Invalid entry! Please enter response again.")
 			// TODO: reset buffer

@@ -14,7 +14,7 @@ func main() {
 		var userInput string
 		randWord := words[rand.Intn(len(words))]
 		fmt.Printf("Type the word '%s' in reverse: ", randWord)
-		fmt.Scanf("%s", &userInput)
+		fmt.Scanf("%s\n", &userInput)
 		if reflect.DeepEqual(userInput, reverseStr(randWord)) {
 			fmt.Println("\u2705")
 		} else {

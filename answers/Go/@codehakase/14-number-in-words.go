@@ -12,7 +12,7 @@ func main() {
 	var input int
 	for {
 		fmt.Print("Enter number: ")
-		fmt.Scanf("%d", &input)
+		fmt.Scanf("%d\n", &input)
 		fmt.Printf("%d becomes %s\n", input, toNumberValue(input))
 	}
 }

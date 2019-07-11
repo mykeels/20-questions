@@ -7,10 +7,10 @@ import (
 func main() {
 	var n, value int
 	fmt.Println("Enter the decimal value you wish to convert: ")
-	fmt.Scanf("%d", &value)
+	fmt.Scanf("%d\n", &value)
 
 	fmt.Println("Enter the value of base n: ")
-	fmt.Scanf("%d", &n)
+	fmt.Scanf("%d\n", &n)
 
 	fmt.Printf("%d base 10 = %d base %d\n\n", value, toBaseN(value, n), n)
 }

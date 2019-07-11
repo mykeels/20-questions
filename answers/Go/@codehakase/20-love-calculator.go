@@ -10,9 +10,9 @@ func main() {
 	var firstPerson, secondPerson string
 	for {
 		fmt.Println("Enter your name: ")
-		fmt.Scanf("%s", &firstPerson)
+		fmt.Scanf("%s\n", &firstPerson)
 		fmt.Println("Enter your crush's name: ")
-		fmt.Scanf("%s", &secondPerson)
+		fmt.Scanf("%s\n", &secondPerson)
 		freq := fmt.Sprintf("%sloves%s", firstPerson, secondPerson)
 		f := getCharFrequency(freq)
 		percentage := calculate(f)

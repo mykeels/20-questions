@@ -36,36 +36,36 @@ func main() {
 
 	for {
 		fmt.Print(notice())
-		fmt.Scanf("%d", &optionUnit)
+		fmt.Scanf("%d\n", &optionUnit)
 		switch optionUnit {
 		case CelsiusToFahrenheit:
 			fmt.Print("Enter a celsius value: ")
-			fmt.Scanf("%f", &input)
+			fmt.Scanf("%f\n", &input)
 			conv = (input * (9.0 / 5.0)) + 32.0
 			fmt.Printf("Fahrenheit value is %.3f ⁰F\n", conv)
 		case FahrenheitToCelsius:
 			fmt.Print("Enter a fahrenheit value: ")
-			fmt.Scanf("%f", &input)
+			fmt.Scanf("%f\n", &input)
 			conv = (input - 32) * (5.0 / 9.0)
 			fmt.Printf("Celsius value is %.3f ⁰F\n", conv)
 		case CelsiusToKelvin:
 			fmt.Print("Enter a celsius value: ")
-			fmt.Scanf("%f", &input)
+			fmt.Scanf("%f\n", &input)
 			conv = (input + 273.15)
 			fmt.Printf("Kelvin value is %.3fK\n", conv)
 		case KelvinToCelsius:
 			fmt.Print("Enter kelvin value: ")
-			fmt.Scanf("%f", &input)
+			fmt.Scanf("%f\n", &input)
 			conv = (input - 273.15)
 			fmt.Printf("Celsius value is %.3f ⁰C\n", conv)
 		case FahrenheitToKelvin:
 			fmt.Print("Enter a fahrenheit value: ")
-			fmt.Scanf("%f", &input)
+			fmt.Scanf("%f\n", &input)
 			conv = (input-32)*(5.0/9.0) + 273.15
 			fmt.Printf("Kelvin value is %.3fK\n", conv)
 		case KelvinToFahrenheit:
 			fmt.Print("Enter kelvin value: ")
-			fmt.Scanf("%f", &input)
+			fmt.Scanf("%f\n", &input)
 			conv = (input-273.15)*(9.0/5.0) + 32
 			fmt.Printf("Fahrenheit value is %.3f ⁰F\n", conv)
 		default:

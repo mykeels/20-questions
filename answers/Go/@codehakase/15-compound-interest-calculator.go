@@ -7,13 +7,13 @@ func main() {
 	var timeInYears int
 
 	fmt.Println("Enter the principal: ")
-	fmt.Scanf("%f", &principal)
+	fmt.Scanf("%f\n", &principal)
 
 	fmt.Println("Enter the rate %: ")
-	fmt.Scanf("%f", &rate)
+	fmt.Scanf("%f\n", &rate)
 
 	fmt.Println("Enter the time in years: ")
-	fmt.Scanf("%d", &timeInYears)
+	fmt.Scanf("%d\n", &timeInYears)
 	fmt.Println()
 
 	for year := 1; year <= timeInYears; year++ {

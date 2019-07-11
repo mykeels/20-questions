@@ -6,7 +6,7 @@ func main() {
 	var salary int
 	for {
 		fmt.Print("Enter salary amount: ")
-		fmt.Scanf("%d", &salary)
+		fmt.Scanf("%d\n", &salary)
 		if salary < 1 {
 			fmt.Println("Invalid salary amount")
 		}
