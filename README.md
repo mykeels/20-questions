@@ -6,7 +6,7 @@ As per [this blog post](https://medium.com/@mykeels/20-questions-a047fa9d3856), 
 
 Each question will require a practical solution, and the concepts you're expected to have mastered by the time you accept it, will be given in detail.
 
-> This is not an list of algorithm exercises.
+> This is not a list of algorithm exercises.
 
 See [answers](./answers).
 
