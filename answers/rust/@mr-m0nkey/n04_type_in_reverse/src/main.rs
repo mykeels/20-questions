@@ -1,4 +1,9 @@
+extern crate rand;
+
 use std::io;
+use rand::{thread_rng, Rng};
+use rand::distributions::Alphanumeric;
+
 
 fn main() {
     
@@ -22,7 +27,13 @@ fn main() {
 }
 
 fn generate_random_word() -> String {
-    unimplemented!();//TODO implement
+    let mut rng = rand::thread_rng();
+    let rand_string: String = thread_rng()
+        .sample_iter(&Alphanumeric)
+        .take(rng.gen_range(3, 15))
+        .collect();
+
+    rand_string
 }
 
 fn reverse(word: &String) -> String {
