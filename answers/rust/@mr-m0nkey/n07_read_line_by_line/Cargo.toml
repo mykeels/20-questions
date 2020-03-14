@@ -1,0 +1,9 @@
+[package]
+name = "n07_read_line_by_line"
+version = "0.1.0"
+authors = ["Mayowa Aj <sagaraaj69@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
