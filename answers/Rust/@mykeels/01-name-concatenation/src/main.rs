@@ -8,17 +8,18 @@ fn main() {
     let last_name = request_personal_info("last name");
     let current_year = get_current_year();
     let birth_year = request_personal_info("birth year");
-    let age: i32 = birth_year
-            .as_deref()
-            .unwrap_or("0")
-            .trim_end()
-            .parse()
-            .unwrap();
+    let birth_year: i32 = birth_year
+        .as_deref()
+        .unwrap_or("0")
+        .trim_end()
+        .parse()
+        .unwrap();
+    let age: i32 = current_year - birth_year;
     println!(
         "Hello, {} {} {}",
         first_name.as_deref().unwrap_or("").trim_end(),
         last_name.as_deref().unwrap_or("").trim_end(),
-        current_year - age
+        age
     );
 }
 
