@@ -106,3 +106,4 @@ typings/
 # Java IDE
 .idea
 nbproject
+.DS_Store
