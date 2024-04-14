@@ -1,5 +1,7 @@
 # SQL 20 Questions.
 
+![20 questions](https://repository-images.githubusercontent.com/189217345/64a5ab80-8234-11e9-84f2-a4b1140229e3)
+
 Using [Sqlite Online](https://sqliteonline.com/) open the [data.db file](./data/data.db) and answer all questions below.
 
 - [01](./01.md)
