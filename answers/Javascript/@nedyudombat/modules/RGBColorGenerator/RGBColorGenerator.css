@@ -1,0 +1,19 @@
+a, h1, p {
+	font-family: 'Raleway', sans-serif;
+}
+
+.nav {
+	margin-bottom: auto;
+}
+
+.color-sample {
+	min-width: 50px;
+	max-width: 50px;
+	min-height: 50px;
+	max-height: 50px;
+	margin: 0 auto;
+}
+
+.text-center {
+	text-align: center;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>20 Solutions || Temperature Conversion</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="temperatureConversion.css">
+  </head>
+  <body>
+		<div class="content">
+			<nav class="nav">
+				<a href="../../index.html">Home</a>
+			</nav>
+			<header>
+				<h1 class="text-center">Temperature Conversion</h1>
+			</header>
+			<form action="" id="concatenationForm" class="form">
+				<p>1 Celsius to Fahrenheit</p>
+				<p>2 Fahrenheit to Celsius</p>
+				<div class="option-input-group">
+					<label for="choice">Enter an option</label>
+					<input class="form-control" placeholder=" 1 or 2" id="choice" type="number" onkeyup="displayConverter(event);"> 
+				</div>
+				<div class="evaluation-container d-none">
+					<p class="text-center">Enter temperature in <span class="unit"></span> </p>
+					<input class="form-control" placeholder=" 1 or 2" id="temperature" type="number" onkeyup="convertTemperature(event);"> 
+					<div class="result"></div>
+				</div>
+				<div class="error d-none"></div>
+			</form>
+		</div>
+
+		<script src="temperatureConversion.js"></script>
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>20 Solutions || Type Reverse</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="typeReverse.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  </head>
+  <body>
+		<div class="content">
+			<nav class="nav">
+				<a href="../../index.html">Home</a>
+			</nav>
+			<header>
+				<h1 class="text-center">Type Reverse</h1>
+			</header>
+			<form action="" id="concatenationForm" class="form">
+				<div class="phrase-container"></div>
+				<input class="form-control" placeholder="Type word or phrase here" id="phrase" type="text" onkeyup="typeReverse(event);"> 
+				<div class="mark success d-none">
+					<i class="fas fa-check-square"></i>
+				</div>
+				<div class="mark failure d-none">
+					<i class="fas fa-times"></i>
+				</div>
+			</form>
+		</div>
+
+		<script src="typeReverse.js"></script>
+	</body>
+</html>

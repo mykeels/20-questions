@@ -1,0 +1,40 @@
+a, h1, p {
+	font-family: 'Raleway', sans-serif;
+}
+
+.nav {
+	margin-bottom: auto;
+}
+
+.form-control {
+	height: 40px;
+	width: 485px;
+	border: 1px solid #c4c4c4;
+	border-radius: 3px;
+	margin-bottom: 15px;
+	box-shadow: none;
+	padding-left: 10px;
+}
+
+.inner {
+	width: 100%;
+	background: red;
+	display: flex;
+	flex-direction: column;
+}
+
+.form {
+	display: block;
+	width: 500px;
+	margin: 0 auto;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.result {
+	padding: 5px 10px;
+	border: 2px dashed green;
+	border-radius: 3px;
+}
